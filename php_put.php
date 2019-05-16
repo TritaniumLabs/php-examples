@@ -30,7 +30,8 @@
 $_POST['gtin']="00001300872567";
 $_POST['lot']="AM09982A";
 
-$url = 'https://traceabilityapi.net/put';   //-- Microsoft Azure
+$url = 'https://traceabilityapi.net/put';   //-- Microsoft Azure Cosmos
+$url = 'https://traceabilityapi.com/put/';   //-- Microsoft Azure Fast API
 
 //-- The Blockchain address of the location where the asset is located.
 //-- Replace with your blockchain address.

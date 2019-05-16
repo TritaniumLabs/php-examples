@@ -29,25 +29,23 @@ $_POST['lot']="AM09982A";
 
 //-- Create 3 Input assets.
 //--1
-$_POST['input_gtin_1']="00001300872567";
-$_POST['input_lot_1']="AM09982A";
+$_POST['input_gtin_1']="00000000000001";
+$_POST['input_lot_1']="A000001";
 
 //--2
-$_POST['input_gtin_2']="00001300871234";
-$_POST['input_lot_2']="AM03242A";
+$_POST['input_gtin_2']="00000000000001";
+$_POST['input_lot_2']="A000002";
 
 //--3
-$_POST['input_gtin_3']="00001300812345";
-$_POST['input_lot_3']="AZ04482A";
+$_POST['input_gtin_3']="00000000000002";
+$_POST['input_lot_3']="A000003";
 
 //-- Optional data addeed to 'data'
 
 $_POST['product_name']="Spicey Guacamole - Batch";
 
-//$url = 'https://traceabilityapi2.net/process'  //-- Amazon AWS
-//$url = 'https://traceabilityapi3.net/process'  //-- Google Cloud
-//$url = 'https://traceabilityapi4.net/process'  //-- IBM
-$url = 'https://traceabilityapi.net/process';   //-- Microsoft Azure
+$url = 'https://traceabilityapi.net/process';   //-- Microsoft Azure Cosmos
+$url = 'https://traceabilityapi.com/process/';   //-- Microsoft Azure - Fast API
 
 $blockchain_address="31a151d30363396042c3d1977a5763b18b90cb7f95192b9f06e7824c626862c1";
 $key=json_decode(file_get_contents('key.json'),true);
@@ -103,18 +101,5 @@ $result = curl_exec($ch);
 curl_close($ch);
 
 echo $result;
-
-//----------------------
-// Return Values 
-//----------------------
-
-// $result_array=json_decode($result)
-// $result_array['code'] - Error Code (should be 0)
-// $result_array['message'] - Error Message (should by Tranaction Complete)
-// $result_array['transactionHash'] - Block ID
-// $result_array['blockHash'] - sha-256 of the block asset data.
-// $result_array['addresses'] - Array of blockchain addresses that participate in the transaction.
-// $result_array['assets'] - Number of assets affected by the transaction.
-
 
 ?>

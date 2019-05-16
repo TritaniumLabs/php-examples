@@ -23,14 +23,15 @@
 //==========================================================================
 
 //-- Sample Post 
-$_POST['input_gtin']="00001300872071";
+$_POST['input_gtin']="00001300872567";
 $_POST['input_lot']="AM09982A";
-$_POST['gtin']="00001300872567";
+$_POST['gtin']="00001300800000";
 $_POST['lot']="AM09982A";
 
 $_POST['product_name']="16oz Package";
 
 $url = 'https://traceabilityapi.net/package';   //-- Microsoft Azure
+$url = 'https://traceabilityapi.com/package/';   //-- Microsoft Azure - Fast API
 
 //-- The Blockchain address of the location where the asset is located.
 //-- Replace with your blockchain address.
@@ -77,18 +78,5 @@ $result = curl_exec($ch);
 curl_close($ch);
 
 echo $result;
-
-//----------------------
-// Return Values 
-//----------------------
-
-// $result_array=json_decode($result)
-// $result_array['code'] - Error Code (should be 0)
-// $result_array['message'] - Error Message (should by Tranaction Complete)
-// $result_array['transactionHash'] - Block ID
-// $result_array['blockHash'] - sha-256 of the block asset data.
-// $result_array['addresses'] - Array of blockchain addresses that participate in the transaction.
-// $result_array['assets'] - Number of assets affected by the transaction.
-
 
 ?>

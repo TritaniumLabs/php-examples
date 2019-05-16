@@ -26,7 +26,7 @@
 //==========================================================================
 
 //-- Sample Post 
-$_POST['address']="1600 E Golf Rd Rolling Meadows IL 60008";
+$_POST['address']="5634 W Oklahoma Ave, Milwaukee, WI 53219";
 $_POST['gtin']="00001300872071";
 $_POST['lot']="AM09982A";
 $_POST['vendor_name']="ACME Wigits";			//-- Added to 'data'
@@ -36,6 +36,7 @@ $_POST['transport_company']="ACME Shipping";	//-- Added to 'shipment_data'
 
 
 $url = 'https://traceabilityapi.net/receive';   //-- Microsoft Azure
+$url = 'https://traceabilityapi.com/receive/';   //-- Microsoft Azure Fast API
 
 //-- The Blockchain address of the location where the asset is located.
 //-- Replace with your blockchain address.

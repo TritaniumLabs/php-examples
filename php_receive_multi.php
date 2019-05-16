@@ -69,7 +69,8 @@ array_push($records,$item3);
 
 $fields['records']=urlencode(json_encode($records));
 
-$url = 'https://traceabilityapi.net/batch.php';   //-- Microsoft Azure
+$url = 'https://traceabilityapi.net/batch';   //-- Microsoft Azure Cosmos
+$url = 'https://traceabilityapi.com/batch/';   //-- Microsoft Azure Cosmos
 
 //-- The Blockchain address of the location where the asset will be received
 //-- Replace with your blockchain address.

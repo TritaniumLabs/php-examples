@@ -23,11 +23,12 @@
 //==========================================================================
 
 //-- Sample Data.
-$_POST['gtin']="IMAGE";
-$_POST['lot']="9982A1234";
-$_POST['show']='Y';
+$_POST['gtin']="00001300872567";
+$_POST['lot']="AM09982A";
+$_POST['show']='N';
 
-$url = 'https://traceabilityapi.com/get/';   //-- Microsoft Azure hosted. 
+$url = 'https://traceabilityapi.net/get';   //-- Microsoft Azure Cosmos
+$url = 'https://traceabilityapi.com/get/';   //-- Microsoft Azure Fast API
 
 //-- The Blockchain address of the location where the asset is located.
 //-- Replace with your blockchain address.
