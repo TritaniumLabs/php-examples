@@ -25,12 +25,13 @@
 //==========================================================================
 
 //-- Sample Post 
-$_POST['gtin']="MyDocument";
-$_POST['lot']="00000000";
+$_POST['gtin']="IMAGE";
+$_POST['lot']="9982A1234";
+$_POST['show']='Y';
 $_POST['file']='Y';
 
 
-$url = 'https://traceabilityapi.net/get';   //-- Microsoft Azure
+$url = 'https://traceabilityapi.com/get/';   //-- Microsoft Azure
 
 //-- The Blockchain address of the location where the asset is located.
 //-- Replace with your blockchain address.
@@ -70,7 +71,7 @@ curl_close($ch);
 // The data from the file will be returned as a stream.
 // Put the contents in a file.
 //------
-file_put_contents("MyTest.png",$result);
+file_put_contents("MyTest2.png",$result);
 
 ?>
-<img src="MyTest.png">
+<img src="MyTest2.png">

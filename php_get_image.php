@@ -27,7 +27,7 @@ $_POST['gtin']="IMAGE";
 $_POST['lot']="9982A1234";
 $_POST['show']='Y';
 
-$url = 'https://traceabilityapi.com/get/';   //-- Microsoft Azure hosted. 
+$url = 'https://traceabilityapi.net/get';   //-- Microsoft Azure hosted. 
 
 //-- The Blockchain address of the location where the asset is located.
 //-- Replace with your blockchain address.
@@ -44,6 +44,7 @@ $fields['auth_key']=$blockchain_address . ":" . $secret_key;
 
 $fields['gtin']=$_POST['gtin'];
 $fields['lot']=$_POST['lot'];
+$fields['file']=$_POST['file'];
 $fields['show']=$_POST['show'];
 
 //-- url-ify the data for the POST
@@ -68,6 +69,4 @@ echo $result;
 //----------------------
 // Return Values 
 //----------------------
-
-
 ?>

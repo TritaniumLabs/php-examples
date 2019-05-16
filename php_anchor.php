@@ -31,7 +31,7 @@ $_POST['asset_code']="9982A1234";
 $_POST['signature']="019141530366394442c5d6977a5763b187908b7995194b9f36e7224262686221";
 $_POST['signature_type']="sha-256";
 
-$url = 'https://traceabilityapi.net/anchor';   //-- Microsoft Azure
+$url = 'https://traceabilityapi.com/anchor/';   //-- Microsoft Azure
 
 
 //-- The Blockchain address of the location where the asset is located.
@@ -49,7 +49,8 @@ $fields['auth_key']=$blockchain_address . ":" . $secret_key;
 
 $fields['asset_type']=$_POST['asset_type'];
 $fields['asset_code']=$_POST['asset_code'];
-$fields['url']=$_POST['url'];
+$fields['signature']=$_POST['signature'];
+$fields['signature_type']=$_POST['signature_type'];
 
 //-- Create optional fields for the document.
 $meta_data=array();
